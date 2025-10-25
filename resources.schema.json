@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/massblabla/resources/blob/master/resources.schema.json",
+    "title": "Resources Schema",
+    "type": "object",
+    "properties": {
+        "resourceId": {
+            "description": "ID of the resource",
+            "type": "string"
+        },
+        "resources": {
+            "description": "Resources in the resource",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "resourceInternalId": {
+                        "description": "Internal ID of the resource",
+                        "type": "integer"
+                    },
+                    "resourcePath": {
+                        "description": "Path of the resource",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    } 
+}
