@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://github.com/massblabla/resources/blob/master/resources.schema.json",
+    "$id": "https://raw.githubusercontent.com/massblabla/resources/refs/heads/main/resources.schema.json",
     "title": "Resources Schema",
     "type": "object",
     "properties": {
@@ -8,22 +8,63 @@
             "description": "ID of the resource",
             "type": "string"
         },
-        "resources": {
+        "resourceList": {
             "description": "Resources in the resource",
             "type": "array",
             "items": {
                 "type": "object",
                 "properties": {
-                    "resourceInternalId": {
-                        "description": "Internal ID of the resource",
+                    "resourceId": {
+                        "description": "ID of the resource",
                         "type": "integer"
                     },
-                    "resourcePath": {
-                        "description": "Path of the resource",
+                    "resourceDir": {
+                        "description": "Directory of the resource",
                         "type": "string"
+                    },
+                    "resources": {
+                        "description": "List of resources",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "resourceId": {
+                                    "description": "ID of the resource",
+                                    "type": "integer"
+                                },
+                                "resourcePath": {
+                                    "description": "Path of the resource",
+                                    "type": "string"
+                                },
+                                "resourceDescription": {
+                                    "description": "Description of the resource",
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "sha256": {
+                                    "description": "SHA-256 hash of the resource",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "resourceId",
+                                "resourcePath",
+                                "resourceDescription",
+                                "sha256"
+                            ]
+                        }
                     }
-                }
+                },
+                "required": [
+                    "resourceId",
+                    "resourceDir",
+                    "resources"
+                ]
             }
         }
-    } 
+    },
+    "required": [
+        "resourceId",
+        "resourceList"
+    ]
 }

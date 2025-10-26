@@ -1,3 +1,30 @@
 {
-    "$schema": "htt"
+    "$schema": "https://raw.githubusercontent.com/massblabla/resources/refs/heads/main/resources.schema.json",
+    "resourceId": "tm",
+    "resourceList": [
+        {
+            "resourceId": 0,
+            "resourceDir": "music",
+            "resources": [
+                {
+                    "resourceId": 0,
+                    "resourcePath": "unused0.ogg",
+                    "resourceDescription": null,
+                    "sha256": "5B3B86F5393FDE8ADD20E77E1287B67C65E3FB45A3D585F382B838587F6E6DD2"
+                }
+            ]
+        },
+        {
+            "resourceId": 1,
+            "resourceDir": "misc",
+            "resources": [
+                {
+                    "resourceId": 0,
+                    "resourcePath": "0",
+                    "resourceDescription": null,
+                    "sha256": "119A75E10FF3D7993047CBF374CD5C3444BB2A2A58B0B5AFE8BAB710436C3F44"
+                }
+            ]
+        }
+    ]
 }
